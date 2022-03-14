@@ -1,0 +1,28 @@
+.soulignage {
+    background:
+      linear-gradient(currentColor 0 0) 50% calc(100% - 0px) /var(--d, 0) 3px no-repeat,
+      linear-gradient(currentColor 0 0) 50% calc(100% - 6px) /var(--d, 0) 3px no-repeat;
+    transition: 0s/*la durée que l'animation prendra pour revenir à son état de base*/ 
+                0.5s/*la durée de réactivation de l'animation à son état final*/, 
+    background-size 0.5s; /*la durée de l'animation lorsque la ligne se rétracte*/
+}
+  
+.soulignage:hover {
+    --d: 100%;
+    background-position: 50% calc(100% - 6px), 50% calc(100% - 0px);
+    transition: 0.3s, background-position 0.3s 0.3s;
+}
+
+.encadrer {
+    background:
+      linear-gradient(currentColor 0 0) top,
+      linear-gradient(currentColor 0 0) right,
+      linear-gradient(currentColor 0 0) bottom,
+      linear-gradient(currentColor 0 0) left;
+    background-size: var(--d, 0) 3px, 6px var(--d, 0);
+    background-repeat: no-repeat;
+    transition: 0.5s;
+  }
+  .encadrer:hover {
+    --d: 100%;
+  }
