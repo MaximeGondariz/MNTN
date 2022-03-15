@@ -1,3 +1,4 @@
+<html>
 <head>
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/Animations.css">
@@ -7,12 +8,25 @@
     <div id="header">
             <h1>MNTN</h1>
         <div id="onglet">
-            <h3 class="encadrer">Equipement</h3>
-            <h3 class="encadrer">Among us</h3>
-            <h3 class="encadrer">Blog</h3>
+            <h3 class="encadrer"><a href="" class="nodeco">Equipement</a></h3>
+            <h3 class="encadrer"><a href="" class="nodeco">About us</a></h3>
+            <h3 class="encadrer"><a href="" class="nodeco">Blog</a></h3>
         </div>
         <div id="account" class="encadrer">
             <h2><img src="Images/Account.png"> Account</h3>
+        </div>
+        <div id="burger">
+            <button id="burger_container">
+                <hr>
+                <hr>
+                <hr>
+            </button>
+            <div id="burgerdropdown">
+                <h3 class="encadrer"><a href="" class="nodeco">Equipement</a></h3>
+                <h3 class="encadrer"><a href="" class="nodeco">About us</a></h3>
+                <h3 class="encadrer"><a href="" class="nodeco">Blog</a></h3>
+                <h3 class="encadrer"><a href="" class="nodeco">Account</a></h3>
+            </div>
         </div>
     </div>
 
@@ -32,10 +46,16 @@
             </div>
         </div>
         <div id="page">
-            <p id="bright"><strong>start</strong></p>
-            <p class="low">1</p>
-            <p class="low">2</p>
-            <p class="low">3</p>
+            <div id="page_text">
+                <p><strong>start</strong></p>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+        </div>
+        <div id="page_bar">
+            <hr class="page_bar_active">
+            <hr class="page_bar_background">
         </div>
     </div>
 
@@ -124,3 +144,5 @@
         </div>
     </div>
 </body>
+<script src="index.js"></script>
+</html>

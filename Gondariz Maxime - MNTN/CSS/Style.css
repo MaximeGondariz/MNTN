@@ -33,6 +33,52 @@ body{
     padding:10px;
 }
 
+#burger{
+    width:80px;
+    position: absolute;
+    display: none;
+}
+
+#burger_container{
+    width:50px;
+    height:50px;
+    display:none;
+    position:absolute;
+    background: none;
+    border:none;
+    margin-top:18px;
+}
+
+#burger hr{
+    margin-bottom:5px;
+    border:solid rgb(0, 0, 0) 3px;;
+}
+
+#burgerdropdown{
+    width:180px;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    display:none;
+    position:absolute;
+    border: solid #000 1px;
+}
+
+#burgerdropdown a{
+    color:#000;
+}
+
+#burger:hover #burgerdropdown {display: block;}
+
+#burger:hover #burgerdropdown {background-color: #ffffff;}
+
+#burgerdropdown a:hover {background-color: #ddd;}
+
+.nodeco{
+    text-decoration: none;
+    color:#fff
+}
+
 #onglet{
     width:300px;
     height:auto;
@@ -80,7 +126,7 @@ body{
 }
 
 #titre{
-    width:850px;
+    width:60%;
     height:310px;
     margin: auto;
     display: flex;
@@ -122,26 +168,46 @@ body{
     margin-inline-start: 0;
 }
 #page{
-    width:80px;
-    height:140px;
-    margin-right:80px;
+    width:110px;
+    height:auto;
 }
 
-#page p{
-    height:43px;
+#page_text{
+    width:80px;
+    height:auto;
+}
+
+#page_text p{
+    height:20px;
     content: "";
     display: block;
     margin-top:0;
-    margin-bottom:0;
+    margin-bottom:50px;
     font-size:18px;
 }
 
-#bright{
-    border-right:solid white 3px
+#page_bar{
+   width:20px;
+   height:280px;
 }
 
-.low{
-    border-right: solid rgba(255, 255, 255, 0.5) 3px;
+.page_bar_background{
+    width: 3px;
+    height: 100%;
+    border: none;
+    background: #fff;
+    opacity: 0.5;
+    position: relative;
+}
+
+.page_bar_active{
+    width: 3px;
+    height: 60px;
+    border: none;
+    background: #fff;
+    position: absolute;
+    z-index: 3;
+    right:8px;
 }
 
 #degrader{
@@ -267,5 +333,55 @@ body{
 
     #deuxieme{
         left:5%;
+    }
+}
+
+@media (max-width:1068px) {
+    #introduction{
+        flex-direction: column-reverse;
+    }
+
+    #page, #page_text, #page_bar{
+        display:none;
+    }
+
+    #reseau{
+        writing-mode: horizontal-tb;
+        width:200px;
+        height:40px;
+        display: flex;
+        align-items: center;
+        margin-top:250px;
+    }
+}
+
+@media (max-width:780px) {
+    #burger{
+        position:relative;
+        display:inline-block;
+    }
+
+    #burger_container{
+        display:block;
+        position:relative;
+    }
+
+    #burger_container hr{
+        border:solid #000 3px;
+    }
+
+    #onglet, #account{
+        display:none;
+        position:absolute;
+    }
+
+    #header{
+        background-color: #fff;
+        margin:0;
+        margin-top:0;
+        width:100%;
+        color:#000;
+        justify-content: space-around;
+        border-bottom : solid #000 2px;
     }
 }
